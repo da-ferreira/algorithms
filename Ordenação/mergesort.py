@@ -52,3 +52,4 @@ def merge(lista, inicio, meio, fim):
         else:
             lista[i] = direita[topo_direita]
             topo_direita += 1
+    
