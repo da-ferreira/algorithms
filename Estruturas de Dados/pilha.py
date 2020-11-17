@@ -5,30 +5,17 @@ Implemetação da estrutura de dados Pilha
 """
 
 def stack():
-    """
-    Cria a pilha
-    """
+    """ Cria a pilha """
     return []
 
 
 def push(stack, item):
-    """
-    Adiciona "item" no topo da pilha
-
-    :param stack: Pilha que vai receber o novo elemento
-    :param item: Elemento a ser adicionado ao topo
-    :return: None
-    """
+    """ Adiciona o elemento "item" no topo da pilha """
     stack.append(item)
 
 
 def pop(stack):
-    """
-    Remove o elemento do topo da pilha
-    
-    :param stack: Pilha que vai ter seu topo removido 
-    :return: O elemento removido
-    """
+    """ Remove o elemento que esta no topo da pilha """
 
     if len(stack) > 0:
         return stack.pop()
@@ -37,12 +24,7 @@ def pop(stack):
 
 
 def peek(stack):
-    """
-    Mostra elemento do topo da pilha
-
-    :param stack: Pilha
-    :return: O elemento do topo da pilha
-    """
+    """ Mostra elemento o elemento que esta no topo da pilha """
 
     if len(stack) > 0:
         return stack[-1]
@@ -50,6 +32,7 @@ def peek(stack):
     raise IndexError('A pilha esta vazia')
 
 
+# Demostracao basica do funcionamento da pilha
 if __name__ == '__main__':
     pilha = stack()
 
@@ -65,4 +48,3 @@ if __name__ == '__main__':
     print(peek(pilha))
     print(pop(pilha))
     print(pop(pilha))
-
