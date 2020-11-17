@@ -32,3 +32,4 @@ def partition(lista, inicio, fim):
 
     return menor_que_pivo  # retornando a posicao do pivo
 
+ 
