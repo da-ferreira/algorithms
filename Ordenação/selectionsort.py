@@ -9,9 +9,9 @@ Categoria: Algoritmo Guloso
 
 def selection_sort(array):
     """
-	:param array: lista a ser ordenada
-	:return: None
-	"""
+    :param array: lista a ser ordenada
+    :return: None
+    """
     
     for i in range(len(array)):
         posicao_menor = i
