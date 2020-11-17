@@ -21,14 +21,3 @@ def selection_sort(array):
                 posicao_menor = j
         
         array[i], array[posicao_menor] = array[posicao_menor], array[i]  # trocando menor com maior
-
-
-if __name__ == '__main__':
-    from random import randint
-
-    print(f'SELECTION SORT')
-
-    teste = [randint(1, 100) for x in range(10)]
-    print(f'Lista: {teste}')
-    selection_sort(teste)
-    print(f'Lista ordenada: {teste}')
