@@ -8,7 +8,6 @@ Categoria: Divisão e conquista
 Complexidade: O(n.log(n))
 """
 
-
 def mergesort(lista, inicio=0, fim=''):
     """
     :param lista: A lista a ser ordenada
@@ -33,14 +32,6 @@ def mergesort(lista, inicio=0, fim=''):
 
 # Fazendo as junções das duas metades da lista
 def merge(lista, inicio, meio, fim):
-    """
-    :param lista: A lista a ser ordenada
-    :param inicio: O indice do inicio da lista
-    :param meio: O indice do meio da lista
-    :param fim: O indice do fim da lista
-    :return: None
-    """
-
     esquerda = lista[inicio:meio]
     direita = lista[meio:fim]
 
@@ -61,5 +52,3 @@ def merge(lista, inicio, meio, fim):
         else:
             lista[i] = direita[topo_direita]
             topo_direita += 1
-
-
