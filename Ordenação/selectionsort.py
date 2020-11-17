@@ -21,3 +21,5 @@ def selection_sort(array):
                 posicao_menor = j
         
         array[i], array[posicao_menor] = array[posicao_menor], array[i]  # trocando menor com maior
+
+          
