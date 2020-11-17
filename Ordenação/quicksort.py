@@ -8,6 +8,13 @@ Categoria: Divisão e conquista
 
 
 def quick_sort(lista, inicio=0, fim=''):
+    """
+    :param lista: A lista a ser ordenada
+    :param inicio=0: O indice do começo da lista
+    :param fim='': O indice do fim da lista
+    :return: None
+    """
+
     if fim == '':
         fim = len(lista) - 1  # O ultimo indice da lista é o pivô de separação.
 
@@ -19,6 +26,13 @@ def quick_sort(lista, inicio=0, fim=''):
 
  
 def partition(lista, inicio, fim):
+    """
+    :param lista: A lista a ser ordenada
+    :param inicio: O indice do começo da lista
+    :param fim: O indice do fim da lista
+    :return: A posicao do pivo
+    """
+    
     pivo2 = lista[fim]
 
     menor_que_pivo = inicio  # elementos menores que o pivo 
