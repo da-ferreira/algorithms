@@ -19,20 +19,13 @@ def quick_sort(lista, inicio=0, fim=''):
         fim = len(lista) - 1  # O ultimo indice da lista é o pivô de separação.
 
     if inicio < fim:  # Condicao de parada
-        pivo = partition(lista, inicio, fim)  # Função de partição
+        pivo = partition(lista, inicio, fim)  # Função para particionar a lista
         
         quick_sort(lista, inicio, pivo - 1)  # Acaba antes da posicao do pivo, lista da esquerda
         quick_sort(lista, pivo + 1, fim)  # lista da direita (maiores que o pivo)
 
  
 def partition(lista, inicio, fim):
-    """
-    :param lista: A lista a ser ordenada
-    :param inicio: O indice do começo da lista
-    :param fim: O indice do fim da lista
-    :return: A posicao do pivo
-    """
-    
     pivo2 = lista[fim]
 
     menor_que_pivo = inicio  # elementos menores que o pivo 
@@ -45,5 +38,3 @@ def partition(lista, inicio, fim):
     lista[menor_que_pivo], lista[fim] = lista[fim], lista[menor_que_pivo]  # trocando o pivo de lugar para o "meio"
 
     return menor_que_pivo  # retornando a posicao do pivo
-
- 
