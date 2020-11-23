@@ -50,3 +50,5 @@ if __name__ == '__main__':
     print(pop(fila))
 
     print('Removido dois elementos do inicio da fila:', fila)
+    
+    
