@@ -2,7 +2,7 @@
 
 Este é um repositório onde disponibilizo alguns dos algoritmos e estruturas de dados clássicos da Ciência da Computação feitos com a linguagem **Python**.
 
-## Algorimos
+## Algoritmos
    - [Busca Binária](https://github.com/da-ferreira/algoritmos_e_estruturas_de_dados/blob/main/Algoritmos/busca-binaria.py)
 
 ## Estruturas de Dados
