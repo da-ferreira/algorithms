@@ -2,7 +2,6 @@
 Algoritmo de busca linear com recursao
 """
 
-
 def linear_search(array, item, index=0):
     if len(array) == 0 or index >= len(array):
         return -1  # Retorna -1 caso o elemento nao esteja na lista, ou a lista estiver vazia.
