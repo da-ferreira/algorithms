@@ -21,3 +21,4 @@ if __name__ == '__main__':
 
     # Testando com um valor fora da lista
     print(f'O valor "5" esta na posicao: {linear_search(lista, 5, 0)}')
+  
