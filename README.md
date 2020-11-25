@@ -4,6 +4,7 @@ Este é um repositório onde disponibilizo alguns dos algoritmos e estruturas de
 
 ## Algoritmos
    - [Busca Binária](https://github.com/da-ferreira/algoritmos_e_estruturas_de_dados/blob/main/Algoritmos/busca-binaria.py)
+   - [Busca Linear Recursiva](https://github.com/da-ferreira/algoritmos_e_estruturas_de_dados/blob/main/Algoritmos/busca-linear-recursiva.py)
 
 ## Estruturas de Dados
    - [Fila](https://github.com/da-ferreira/algoritmos_e_estruturas_de_dados/blob/main/Estruturas%20de%20Dados/fila.py)
