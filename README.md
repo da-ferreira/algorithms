@@ -12,6 +12,7 @@ Este é um repositório onde disponibilizo alguns dos algoritmos e estruturas de
 
 ## Ordenação
    - [Bubble Sort](https://github.com/da-ferreira/algoritmos_e_estruturas_de_dados/blob/main/Ordenação/bubble_sort.py)
+   - [Cocktail Sort](https://github.com/da-ferreira/algoritmos_e_estruturas_de_dados/blob/main/Ordenação/cocktailsort.py)
    - [Comb Sort](https://github.com/da-ferreira/algoritmos_e_estruturas_de_dados/blob/main/Ordenação/combsort.py)
    - [Counting Sort](https://github.com/da-ferreira/algoritmos_e_estruturas_de_dados/blob/main/Ordenação/counting_sort.py)
    - [Gnome Sort](https://github.com/da-ferreira/algoritmos_e_estruturas_de_dados/blob/main/Ordenação/gnomesort.py)
