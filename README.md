@@ -25,4 +25,5 @@ Este é um repositório onde disponibilizo alguns dos algoritmos e estruturas de
   
 ## Outros
    - [Formula de Kamenetsky](https://github.com/da-ferreira/algoritmos_e_estruturas_de_dados/blob/main/Outros/kamenetsky_formula.py)
+   - [Método de Gauss](https://github.com/da-ferreira/algoritmos_e_estruturas_de_dados/blob/main/Outros/formula-da-area-de-gauss.py)
  
