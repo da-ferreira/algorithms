@@ -5,7 +5,7 @@ Implementacao da formula da area de Gauss
 
 A formula eh utilizada quando deseja-se saber a area
 de um poligono qualquer (regular ou irregular) pelas
-coordenadas de seus vertices.
+coordenadas de suas vertices.
 """
 
 def gauss(vertices):
