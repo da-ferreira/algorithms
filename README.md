@@ -24,6 +24,7 @@ Este é um repositório onde disponibilizo alguns dos algoritmos e estruturas de
    - [Shell Sort](https://github.com/da-ferreira/algoritmos_e_estruturas_de_dados/blob/main/Ordenação/shellsort.py)
   
 ## Outros
+   - [Distância Euclidiana](https://github.com/da-ferreira/algoritmos_e_estruturas_de_dados/blob/main/Outros/distancia-euclidiana-dois-pontos.py)
    - [Formula de Kamenetsky](https://github.com/da-ferreira/algoritmos_e_estruturas_de_dados/blob/main/Outros/kamenetsky_formula.py)
    - [Método de Gauss](https://github.com/da-ferreira/algoritmos_e_estruturas_de_dados/blob/main/Outros/formula-da-area-de-gauss.py)
  
