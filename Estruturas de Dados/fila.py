@@ -1,54 +1,51 @@
 """
 Autor: David Ferreira de Almeida
-
 Implemetação da estrutura de dados Fila
 """
 
-
-def queue():
-    """ Cria a fila """
-    return []
-
-
-def push(queue, item):
-    """ Adiciona o elemento "item" no topo da fila """
-    queue.append(item)
-
-
-def pop(queue):
-    """ Remove o elemento que esta no inicio da fila """
-
-    if len(queue) > 0:
-        return queue.pop(0)
+class Queue:
+    def __init__(self):
+        self.queue = []
+        self.size = 0
     
-    raise IndexError('A fila esta vazia')
 
-
-def peek(queue):
-    """ Mostra elemento o elemento que esta no inicio da fila """
-
-    if len(queue) > 0:
-        return queue[0]
+    # Adiciona um novo elemento na fila
+    def push(self, elemento):
+        self.queue.append(elemento)
+        self.size += 1
     
-    raise IndexError('A fila esta vazia')
+
+    # Remove o elemento do inicio da fila
+    def pop(self):
+        if self.size > 0:
+            self.size -= 1
+            return self.queue.pop(0)
+
+        raise IndexError('A fila esta vazia')    
+
+
+    # Observa o primeiro da fila
+    def peek(self):
+        if self.size > 0:
+            return self.queue[0]
+
+        raise IndexError('A fila esta vazia')    
+
+    
+    def __str__(self):
+        return ' <- '.join(str(x) for x in self.queue)
 
 
 if __name__ == '__main__':
-    fila = queue()
+    fila = Queue()
 
     for i in range(1, 11, 3):
-        push(fila, i)
+        fila.push(i)
 
     print('Fila gerada:', fila)
-    print('Removendo um elemento do inicio:', pop(fila))    
+    print('Removendo um elemento do inicio:', fila.pop())    
     
-    push(fila, 'casa')
+    fila.push('casa')
     print('Adiconado "casa" no fim da fila:', fila)
 
-    print('Elemento que está no começo da fila:', peek(fila))
-    print(pop(fila))
-    print(pop(fila))
-
-    print('Removido dois elementos do inicio da fila:', fila)
-    
-    
+    print('Elemento que está no começo da fila:', fila.peek())
