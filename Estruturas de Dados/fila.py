@@ -49,3 +49,4 @@ if __name__ == '__main__':
     print('Adiconado "casa" no fim da fila:', fila)
 
     print('Elemento que está no começo da fila:', fila.peek())
+  
