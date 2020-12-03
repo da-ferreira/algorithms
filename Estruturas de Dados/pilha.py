@@ -24,6 +24,7 @@ class Stack:
         raise IndexError('A pilha esta vazia')
 
 
+    # Observa que esta no topo da pilha
     def peek(self):
         if self.size > 0:
             return self.stack[-1]
@@ -35,7 +36,7 @@ class Stack:
         return ' -> '.join(str(x) for x in self.stack)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     pilha = Stack()
 
     pilha.push(15)
