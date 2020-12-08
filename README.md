@@ -7,6 +7,7 @@ Este é um repositório onde disponibilizo alguns dos algoritmos e estruturas de
    - [Busca Linear Recursiva](https://github.com/da-ferreira/algorithms_and_data_structures/blob/main/Algoritmos/busca-linear-recursiva.py)
 
 ## Estruturas de Dados
+   - [Deque](https://github.com/da-ferreira/algorithms_and_data_structures/blob/main/Estruturas%20de%20Dados/deque.py)
    - [Fila](https://github.com/da-ferreira/algorithms_and_data_structures/blob/main/Estruturas%20de%20Dados/fila.py)
    - [Lista Encadeada](https://github.com/da-ferreira/algorithms_and_data_structures/blob/main/Estruturas%20de%20Dados/lista_encadeada.py)
    - [Pilha](https://github.com/da-ferreira/algorithms_and_data_structures/blob/main/Estruturas%20de%20Dados/pilha.py)
