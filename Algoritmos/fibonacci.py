@@ -26,3 +26,4 @@ def fibonacci(termo):
 if __name__ == '__main__':
     t = int(input('Termo: '))
     print(f'O {t}° termo de fibonacci é: {fibonacci(t)}')
+     
