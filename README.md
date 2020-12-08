@@ -5,6 +5,7 @@ Este é um repositório onde disponibilizo alguns dos algoritmos e estruturas de
 ## Algoritmos
    - [Busca Binária](https://github.com/da-ferreira/algorithms_and_data_structures/blob/main/Algoritmos/busca-binaria.py)
    - [Busca Linear Recursiva](https://github.com/da-ferreira/algorithms_and_data_structures/blob/main/Algoritmos/busca-linear-recursiva.py)
+   - [Sequência de Fibonacci](https://github.com/da-ferreira/algorithms_and_data_structures/blob/main/Algoritmos/fibonacci.py)
 
 ## Estruturas de Dados
    - [Deque](https://github.com/da-ferreira/algorithms_and_data_structures/blob/main/Estruturas%20de%20Dados/deque.py)
