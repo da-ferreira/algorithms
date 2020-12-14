@@ -8,6 +8,7 @@ Este é um repositório onde disponibilizo alguns dos algoritmos e estruturas de
    - [Sequência de Fibonacci](https://github.com/da-ferreira/algorithms_and_data_structures/blob/main/Algoritmos/fibonacci.py)
 
 ## Estruturas de Dados
+   - [Árvore Binária](https://github.com/da-ferreira/algorithms_and_data_structures/blob/main/Estruturas%20de%20Dados/arvore_binaria.py)
    - [Deque](https://github.com/da-ferreira/algorithms_and_data_structures/blob/main/Estruturas%20de%20Dados/deque.py)
    - [Fila](https://github.com/da-ferreira/algorithms_and_data_structures/blob/main/Estruturas%20de%20Dados/fila.py)
    - [Lista Encadeada](https://github.com/da-ferreira/algorithms_and_data_structures/blob/main/Estruturas%20de%20Dados/lista_encadeada.py)
