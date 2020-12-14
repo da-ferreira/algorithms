@@ -104,7 +104,7 @@ class BinaryTree:
 
 
 def tree_exemple():
-    tree = BinaryTree()  # para o percurso em pós ordem
+    tree = BinaryTree() 
     n0 = Node('A')
     n1 = Node('B')
     n2 = Node('C')
