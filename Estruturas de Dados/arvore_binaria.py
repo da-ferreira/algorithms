@@ -1,7 +1,21 @@
-"""
-Autor: David Ferreira de Almeida
-Implementacao de uma arvore binaria
-"""
+
+# Autor: David Ferreira de Almeida
+# Implementacao de uma arvore binaria
+#
+# Exemplo de uma árvore binária que será usado durante o código
+#           A
+#          / \
+#         /   \
+#        /     \
+#       B       C
+#      / \     /
+#     D   E   F 
+#        / \   \
+#       G   H   I
+#            \
+#             J
+#
+
 
 # o nó permite ligar os elementos esparsos da árvore
 class Node:
@@ -26,18 +40,11 @@ class BinaryTree:
 
     
     # Percurso em ordem simétrica a partir do nó passado como parâmetro.
-    #      '+'
-    #    /     \
-    #  'a'      '*'
-    #          /   \
-    #        'b'    '-'
-    #              /    \
-    #            '/'    'e' 
-    #           /   \
-    #         'c'   'd'
-    #
-    # A ordem visitada no exemplo acima sera:
-    # (a+(b*((c/d)-e)))
+    # O percurso mostra primeiro o elemento da esquerda, depois a raíz, e
+    # o elemento da direita, recursivamente. É possivel representar expressões
+    # matemáticas com este percurso.
+    # A ordem visitada no exemplo visto acima sera:
+    # D, B, G, E, H, J, A, F, I, C
 
     def simetric_route(self, node=None):
         if node is None:
@@ -46,34 +53,18 @@ class BinaryTree:
         # Chamando recursivamente e mostrando os elementos
 
         if node.left is not None:
-            # O print com o "(" não é necessário em percurso em ordem simétrica,
-            # mas, é possivel geral uma expressão matemática com eles como no exemplo acima.  
-
-            print('(', end='')
             self.simetric_route(node.left)
         
-        print(node, end='')  # mostrando o elemento do nó
+
+        print(node, end=' ')  # mostrando o elemento do nó
 
         if node.right is not None:
             self.simetric_route(node.right)
-            print(')', end='')
 
 
     # Percurso em pós ordem: exibi os filhos da esquerda e direita antes de mostrar a sí mesmo,
     # visitando recursivamente sua sub-árvore da esquerda, e depois sua sub-árvore da direta.
-    #           A
-    #          / \
-    #         /   \
-    #        /     \
-    #       B       C
-    #      / \     /
-    #     D   E   F 
-    #        / \   \
-    #       G   H   I
-    #            \
-    #             J
-    #
-    # A ordem visitada no exemplo acima sera: 
+    # A ordem visitada no exemplo visto acima sera: 
     # D, G, J, H, E, B, I, F, C, A
 
     def post_order_route(self, node=None):
@@ -86,7 +77,7 @@ class BinaryTree:
         if node.right is not None:
             self.post_order_route(node.right)
         
-        print(node)  # mostrando o elemento do nó
+        print(node, end=' ')  # mostrando o elemento do nó
     
 
     # Altura da árvore: raíz ate sua folha mais profunda.
@@ -112,33 +103,7 @@ class BinaryTree:
         return height_right + 1
 
 
-def ordem_simetrica_exemplo():
-    tree = BinaryTree()  # para o percurso em ordem simetrica
-    n1 = Node('a')
-    n2 = Node('+')
-    n3 = Node('*')
-    n4 = Node('b')
-    n5 = Node('-')
-    n6 = Node('/')
-    n7 = Node('c')
-    n8 = Node('d')
-    n9 = Node('e')
-
-    n6.left = n7
-    n6.right = n8
-    n5.left = n6
-    n5.right = n9
-    n3.left = n4
-    n3.right = n5
-    n2.left = n1
-    n2.right = n3
-    
-    tree.root = n2
-
-    return tree
-
-
-def pos_ordem_exemplo():
+def tree_exemple():
     tree = BinaryTree()  # para o percurso em pós ordem
     n0 = Node('A')
     n1 = Node('B')
@@ -167,14 +132,15 @@ def pos_ordem_exemplo():
 
 
 if __name__ == '__main__':
-    tree = pos_ordem_exemplo()
-    print('Percurso em pós ordem:')
-    tree.post_order_route()
-
-    print(f'\nA altura da árvore: {tree.height()}')   
-
-    #tree2 = ordem_simetrica_exemplo()
-    #print('Percurso em ordem simétrica:')
-    #tree2.simetric_route()
-
+    tree = tree_exemple()
+    print('Percurso em ordem simétrica:')
+    tree.simetric_route()
+    print()
     
+    tree2 = tree_exemple()
+    print('Percurso em pós ordem:')
+    tree2.post_order_route()
+    
+    print(f'\nA altura da árvore: {tree2.height()}')   
+    
+     
