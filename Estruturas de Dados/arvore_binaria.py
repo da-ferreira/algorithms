@@ -16,6 +16,7 @@
 #             J
 #
 
+ROOT = 'root'
 
 # o nó permite ligar os elementos esparsos da árvore
 class Node:
@@ -46,19 +47,19 @@ class BinaryTree:
     # A ordem visitada no exemplo visto acima sera:
     # D, B, G, E, H, J, A, F, I, C
 
-    def simetric_route(self, node=None):
+    def inorder_route(self, node=None):
         if node is None:
             node = self.root
         
         # Chamando recursivamente e mostrando os elementos
 
         if node.left is not None:
-            self.simetric_route(node.left)
+            self.inorder_route(node.left)
 
         print(node, end=' ')  # mostrando o elemento do nó
 
         if node.right is not None:
-            self.simetric_route(node.right)
+            self.inorder_route(node.right)
 
 
     # Percurso em pós ordem: exibi os filhos da esquerda e direita antes de mostrar a sí mesmo,
@@ -100,6 +101,33 @@ class BinaryTree:
             return height_left + 1
             
         return height_right + 1
+    
+
+    # Percurso em Nível
+    # O elementos visitados são os de cada nivel da árvore, da esquerda para a direita.
+    # Para obter esse percurso é necessário usar uma Fila, seguindo a regra: primeiro a entrar,
+    # primeiro a sair.
+    # A ordem visitada no exemplo visto acima sera: 
+    # A, B, C, D, E, F, G, H, I, J
+    
+    def route_at_level(self, node=ROOT):
+        if node == ROOT:
+            node = self.root
+        
+        queue = []
+        queue.append(node)  # insere no final, e remove do inicio
+
+        while len(queue) > 0:
+            node = queue.pop(0)
+
+            if node.left is not None:
+                queue.append(node.left)
+            
+            if node.right is not None:
+                queue.append(node.right)
+            
+            print(node, end=' ')
+
 
 
 def tree_exemple():
@@ -133,13 +161,15 @@ def tree_exemple():
 if __name__ == '__main__':
     tree = tree_exemple()
     print('Percurso em ordem simétrica:')
-    tree.simetric_route()
+    tree.inorder_route()
     print()
     
-    tree2 = tree_exemple()
-    print('Percurso em pós ordem:')
-    tree2.post_order_route()
+    print('\n\nPercurso em pós ordem:')
+    tree.post_order_route()
     
-    print(f'\nA altura da árvore: {tree2.height()}')   
+    print('\n\nPercurso em Nível:')
+    tree.route_at_level()
+
+    print(f'\n\nA altura da árvore: {tree.height()}')   
     
-     
+      
