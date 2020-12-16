@@ -138,7 +138,6 @@ class BinarySearchTree:
     # primeiro a sair.
     # A ordem visitada no exemplo visto acima sera: 
     # 61, 43, 89, 16, 51, 66, 11, 32, 55, 79, 77, 82
-
     
     def route_at_level(self, node=ROOT):
         if node == ROOT:
