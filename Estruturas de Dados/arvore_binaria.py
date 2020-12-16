@@ -1,6 +1,6 @@
 
 # Autor: David Ferreira de Almeida
-# Implementacao de uma arvore binaria
+# Implementacao de uma Árvore Binária
 #
 # Exemplo de uma árvore binária que será usado durante o código
 #           A
@@ -39,7 +39,7 @@ class BinaryTree:
             self.root = None
 
     
-    # Percurso em ordem simétrica a partir do nó passado como parâmetro.
+    # Percurso em ordem simétrica.
     # O percurso mostra primeiro o elemento da esquerda, depois a raíz, e
     # o elemento da direita, recursivamente. É possivel representar expressões
     # matemáticas com este percurso.
@@ -54,7 +54,6 @@ class BinaryTree:
 
         if node.left is not None:
             self.simetric_route(node.left)
-        
 
         print(node, end=' ')  # mostrando o elemento do nó
 
@@ -104,7 +103,7 @@ class BinaryTree:
 
 
 def tree_exemple():
-    tree = BinaryTree() 
+    tree = BinaryTree()
     n0 = Node('A')
     n1 = Node('B')
     n2 = Node('C')
