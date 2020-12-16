@@ -19,6 +19,7 @@
 #               77 82
 #
 
+ROOT = 'root'
 
 # o nó permite ligar os elementos esparsos da árvore
 class Node:
@@ -98,44 +99,82 @@ class BinarySearchTree:
     # A ordem visitada no exemplo visto acima sera:
     # 11, 16, 32, 43, 51, 55, 61, 66, 77, 79, 82, 89
 
-    def simetric_route(self, node=None):
+    def inorder_route(self, node=None):
         if node is None:
             node = self.root
         
         # Chamando recursivamente e mostrando os elementos
 
         if node.left is not None:
-            self.simetric_route(node.left)
+            self.inorder_route(node.left)
         
         print(node, end=' ')  # mostrando o elemento do nó
 
         if node.right is not None:
-            self.simetric_route(node.right)
+            self.inorder_route(node.right)
+    
+
+    # Percurso em pós ordem: exibi os filhos da esquerda e direita antes de mostrar a sí mesmo,
+    # visitando recursivamente sua sub-árvore da esquerda, e depois sua sub-árvore da direta.
+    # A ordem visitada no exemplo visto acima sera: 
+    # 11, 32, 16, 55, 51, 43, 77, 82, 79, 66, 89, 61
+
+    def post_order_route(self, node=None):
+        if node is None:  # Começa o percurso pela raíz da árvore
+            node = self.root
+
+        if node.left is not None:
+            self.post_order_route(node.left)
+        
+        if node.right is not None:
+            self.post_order_route(node.right)
+        
+        print(node, end=' ')  # mostrando o elemento do nó
+    
+
+    # Percurso em Nível
+    # O elementos visitados são os de cada nivel da árvore, da esquerda para a direita.
+    # Para obter esse percurso é necessário usar uma Fila, seguindo a regra: primeiro a entrar,
+    # primeiro a sair.
+    # A ordem visitada no exemplo visto acima sera: 
+    # 61, 43, 89, 16, 51, 66, 11, 32, 55, 79, 77, 82
+
+    
+    def route_at_level(self, node=ROOT):
+        if node == ROOT:
+            node = self.root
+        
+        queue = []
+        queue.append(node)  # insere no final, e remove do inicio
+
+        while len(queue) > 0:
+            node = queue.pop(0)
+
+            if node.left is not None:
+                queue.append(node.left)
+            
+            if node.right is not None:
+                queue.append(node.right)
+            
+            print(node, end=' ')
 
 
 if __name__ == '__main__':
-    import random
-
     bst = BinarySearchTree()
 
-    random.seed(50)
-    vetor = random.sample(range(1, 100), 10)
+    # valores do exemplo
+    valores = [61, 43, 89, 16, 51, 66, 11, 32, 55, 79, 77, 82]
 
-    print(vetor)
+    for i in valores:
+        bst.insert(i)
+    
+    print('Percurso em Nível:')
+    bst.route_at_level()
 
-    for item in vetor:
-        bst.insert(item)
+    print('\n\nPercurso em Pós Ordem:')
+    bst.post_order_route()
 
-    # Com o percurso em ordem simétrica os elementos ficam em ordem crescente
-    bst.simetric_route()
-    print('\n')
-
-    itens = [35, 14, 61, 7]
-
-    for i in itens:
-        temp = bst.search(i)
-
-        if temp is None:
-            print(f'{i} não está na árvore')
-        else:
-            print(f'{temp.root.data} está na árvore')
+    print('\n\nPercurso em Ordem Simétrica:')
+    bst.inorder_route()
+    print()
+  
