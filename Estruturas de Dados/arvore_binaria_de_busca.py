@@ -18,6 +18,7 @@
 #                / \
 #               77 82
 #
+# 61, 43, 16, 11, 32, 51, 55, 89, 66, 79, 77, 82
 
 ROOT = 'root'
 
@@ -91,8 +92,48 @@ class BinarySearchTree:
         
         return self.search(element, node.right)  # Se for maior, segue pela direita.
 
+    
+    # O menor elemento da árvore está o máximo à esquerda,
+    # e que não possua um filho à esquerda.
+    def min(self, node=ROOT):
+        if node == ROOT:
+            node = self.root
 
-    # Percurso em ordem simétrica.
+        while node.left is not None:
+            node = node.left
+
+        return node.data
+
+
+    # O maior elemento da árvore está o máximo à direita,
+    # e que não possua um filho à direita.
+    def max(self, node=ROOT):
+        if node == ROOT:
+            node = self.root
+
+        while node.right is not None:
+            node = node.right
+
+        return node.data
+
+
+    # Percurso em pré ordem.
+    # O percurso mostra a raíz, depois o elemento à esquerda e o elemento à dereita.
+    # A ordem visitada no exemplo visto acima sera:
+    # 61, 43, 16, 11, 32, 51, 55, 89, 66, 79, 77, 82
+
+    def pre_order_route(self, node=ROOT):
+        if node == ROOT:
+            node = self.root
+
+        if node is not None:
+            print(node, end=' ')
+
+            self.pre_order_route(node.left)
+            self.pre_order_route(node.right)
+            
+
+    # Percurso em ordem simétrica/em ordem.
     # O percurso mostra primeiro o elemento da esquerda, depois a raíz, e
     # o elemento da direita, recursivamente. Na BST os elementos ficam em ordem crescente,
     # quando é usado esse percurso.
@@ -138,7 +179,7 @@ class BinarySearchTree:
     # primeiro a sair.
     # A ordem visitada no exemplo visto acima sera: 
     # 61, 43, 89, 16, 51, 66, 11, 32, 55, 79, 77, 82
-    
+
     def route_at_level(self, node=ROOT):
         if node == ROOT:
             node = self.root
@@ -156,6 +197,29 @@ class BinarySearchTree:
                 queue.append(node.right)
             
             print(node, end=' ')
+    
+
+    # Altura da árvore: raíz ate sua folha mais profunda.
+    # O objetivo é olhar a altura das sub-arvores da esquerda e direita,
+    # utilizando o percurso em pós ordem, e pegar a maior altura e incrementar 1.
+    def height(self, node=None):
+        if node is None:
+            node = self.root  # altura da arvore completa
+
+        height_left = 0  # altura da sub-árvore esquerda
+        height_right = 0  # altura da sub-árvore direita
+
+        if node.left is not None:
+            height_left = self.height(node.left)
+        
+        if node.right is not None:
+            height_right = self.height(node.right)
+
+
+        if height_left > height_right:
+            return height_left + 1
+            
+        return height_right + 1
 
 
 if __name__ == '__main__':
@@ -166,14 +230,22 @@ if __name__ == '__main__':
 
     for i in valores:
         bst.insert(i)
+
+    print('Percurso em Pré Ordem:')
+    bst.pre_order_route()
     
-    print('Percurso em Nível:')
-    bst.route_at_level()
+    print('\n\nPercurso em Ordem Simétrica/Em ordem:')
+    bst.inorder_route()
 
     print('\n\nPercurso em Pós Ordem:')
     bst.post_order_route()
+    
+    print('\n\nPercurso em Nível:')
+    bst.route_at_level()
+    
+    print('\n')
 
-    print('\n\nPercurso em Ordem Simétrica:')
-    bst.inorder_route()
-    print()
+    print(f'Menor elemento da árvore: {bst.min()}')  # -> 11
+    print(f'Maior elemento da árvore: {bst.max()}')  # -> 89
+    print(f'Altura da árvore: {bst.height()}')  # -> 5
   
