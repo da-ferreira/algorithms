@@ -39,6 +39,21 @@ class BinaryTree:
         else:
             self.root = None
 
+    # Percurso em pré ordem.
+    # O percurso mostra a raíz, depois o elemento à esquerda e o elemento à dereita.
+    # A ordem visitada no exemplo visto acima sera:
+    # A, B, D, E, G, H, J, C, F, I
+
+    def pre_order_route(self, node=ROOT):
+        if node == ROOT:
+            node = self.root
+
+        if node is not None:
+            print(node, end=' ')
+
+            self.pre_order_route(node.left)
+            self.pre_order_route(node.right)
+
     
     # Percurso em ordem simétrica.
     # O percurso mostra primeiro o elemento da esquerda, depois a raíz, e
@@ -160,7 +175,11 @@ def tree_exemple():
 
 if __name__ == '__main__':
     tree = tree_exemple()
-    print('Percurso em ordem simétrica:')
+
+    print('Percurso em Pré Ordem:')
+    tree.pre_order_route()
+
+    print('\n\nPercurso em ordem simétrica/em ordem:')
     tree.inorder_route()
     print()
     
@@ -169,7 +188,8 @@ if __name__ == '__main__':
     
     print('\n\nPercurso em Nível:')
     tree.route_at_level()
+    
 
     print(f'\n\nA altura da árvore: {tree.height()}')   
     
-      
+       
