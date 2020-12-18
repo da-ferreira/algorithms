@@ -20,7 +20,7 @@
 #
 # 61, 43, 16, 11, 32, 51, 55, 89, 66, 79, 77, 82
 
-ROOT = 'root'
+ROOT = 'root'  # valor constante que será usado como valor padrão em alguns casos no código.
 
 # o nó permite ligar os elementos esparsos da árvore
 class Node:
@@ -91,6 +91,61 @@ class BinarySearchTree:
             return self.search(element, node.left)  # Se o elemento for menor que o valor do nó, ele segue pela esquerda.
         
         return self.search(element, node.right)  # Se for maior, segue pela direita.
+    
+
+    # Para a remoção de um elemento da árvore, tem 3 casos possíveis:
+    # 1. Quando o elemento removido é uma folha.
+    # 2. Quando o elemento removido tem apenas um filho (esquerda ou direita)
+    # 3. Quando o elemento removido tem os dois filhos (esquerda e direita)
+    # No 3º caso removemos o elementos, e substituimos pelo menor elemento da sua
+    # sub-árvore da direita.
+
+    def remove(self, element, node=ROOT):
+        if node == ROOT:
+            node = self.root
+        
+        # Desceu até um ramo nulo, ou seja, o elemento não está na árvore.
+        if node is None:
+            return node
+
+        # se o elemento for menor, ele desce para a esquerda
+        if element < node.data:
+            node.left = self.remove(element, node.left)
+        
+        # se o elemento for menor, ele desce para a direita
+        elif element > node.data:
+            node.right = self.remove(element, node.right)
+
+        # Elemento encontrado, ou seja, igual.
+        else:
+            # O primeiro caso, quando o elemento a ser removido é uma folha
+            # retorna-se None, ao filho da esquerda ou da direita do pai do elemento, 
+            # que é equivalente a remover o elemento.
+
+            # O segundo caso, quando o elemento que apenas um filho (esquerda ou direita),
+            # retorna para como filho (à esquerda ou direita) do pai do elemento, o nó do
+            # filho que não é Nulo do elemento removido.
+
+            if node.left is None:
+                return node.right
+
+            elif node.right is None:
+                return node.left
+
+            # O terceiro caso, quando o elemento tem dois filhos.
+            else:
+                # O substituto será o menor elemento da sub-árvore da direita,
+                # que vai substituir o elemento removido.
+                substitute = self.min(node.right)
+
+                # Trocando o valor do removido pelo seu substituto.
+                node.data = substitute
+
+                # removendo o valor substituto da sub-árvore da direita.
+                node.right = self.remove(substitute, node.right)
+
+        # retornando o proprio nó para os casos que não foram feitas alterações para à esquerda ou direita
+        return node  
 
     
     # O menor elemento da árvore está o máximo à esquerda,
@@ -248,4 +303,12 @@ if __name__ == '__main__':
     print(f'Menor elemento da árvore: {bst.min()}')  # -> 11
     print(f'Maior elemento da árvore: {bst.max()}')  # -> 89
     print(f'Altura da árvore: {bst.height()}')  # -> 5
-  
+    
+    print(bst.remove(66))  # <- removendo o 66
+    
+    print('\nPercurso em Ordem Simétrica/Em ordem:')
+    bst.inorder_route()
+    
+    print('\n\nPercurso em Nível:')
+    bst.route_at_level()
+           
