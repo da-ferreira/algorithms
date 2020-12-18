@@ -16,7 +16,7 @@
 #             J
 #
 
-ROOT = 'root'
+ROOT = 'root'  # valor constante que será usado como valor padrão em alguns casos no código.
 
 # o nó permite ligar os elementos esparsos da árvore
 class Node:
