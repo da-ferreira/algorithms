@@ -80,4 +80,4 @@ if __name__ == '__main__':
     
     print(fenwick)
     print(range_sum_query(fenwick, 2))  # <- Quantos elementos são menores que 3?
-
+                 
