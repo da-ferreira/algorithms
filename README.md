@@ -13,7 +13,7 @@ Este é um repositório onde disponibilizo alguns dos algoritmos e estruturas de
    - [Árvore de Fenwick](https://github.com/da-ferreira/algorithms_and_data_structures/blob/main/Estruturas%20de%20Dados/arvore_de_fenwick.py)
    - [Deque](https://github.com/da-ferreira/algorithms_and_data_structures/blob/main/Estruturas%20de%20Dados/deque.py)
    - [Fila](https://github.com/da-ferreira/algorithms_and_data_structures/blob/main/Estruturas%20de%20Dados/fila.py)
-   - [Lista Encadeada(incompleta)](https://github.com/da-ferreira/algorithms_and_data_structures/blob/main/Estruturas%20de%20Dados/lista_encadeada.py)
+   - [Lista Encadeada (incompleta)](https://github.com/da-ferreira/algorithms_and_data_structures/blob/main/Estruturas%20de%20Dados/lista_encadeada.py)
    - [Lista Duplamente Encadeada]()
    - [Mínimo Stack](https://github.com/da-ferreira/algorithms_and_data_structures/blob/main/Estruturas%20de%20Dados/minimo_stack.py)
    - [Pilha](https://github.com/da-ferreira/algorithms_and_data_structures/blob/main/Estruturas%20de%20Dados/pilha.py)
