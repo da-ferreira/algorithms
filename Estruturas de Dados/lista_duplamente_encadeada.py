@@ -30,7 +30,7 @@ class DoublyLinkedList:
             self.tail = Node(element)
             
         else:
-            # cria um novo nó e aponta seu 'anterior' para o atual rabo da lista.
+            # cria um novo nó
             new_node = Node(element)
             
             if self._size == 1:
@@ -53,4 +53,65 @@ class DoublyLinkedList:
 
     def prepend(self, element):
         """ Insere um elemento no inicio da lista """
-        pass
+        
+        if self.head is None:  # primeiro elemento inserido na lista.
+            self.head = Node(element)
+            self.tail = Node(element)
+        else:
+            # cria um novo nó
+            new_node = Node(element)
+
+            # aponta o elemento anterior da atual cabeça da lista para o novo elemento.
+            # aponta o elemento próximo do novo elemento para a atual cabeça da lista.
+            # coloca como cabeça da lista o novo elemento.
+
+            self.head.previous = new_node
+            new_node.next = self.head
+            self.head = new_node
+
+        self._size += 1
+    
+    
+    def remove(self, element):
+        """ Remove um elemento da lista (se ele existir) """
+        
+        # verifica se o rabo da lista é o elemento (remoção em O(1))
+        if self.tail.data == element: 
+            # colocando o elemento anterior ao rabo como rabo da lista.
+            self.tail = self.tail.previous  
+            self.tail.next = None
+
+            self._size -= 1
+            return None
+        else:
+            pointer = self.head
+
+            while pointer is not None:
+                if pointer.data == element:
+                    # Ligando o nó anterior ao elemento com o nó posterior ao elemento
+                    pointer.previous.next = pointer.next
+                    pointer.next.previous = pointer.previous
+
+                    pointer = None
+                    self._size -= 1
+                    return pointer  # retornando None
+
+                pointer = pointer.next
+            
+        # caso o elemento não esteja na lista
+        raise ValueError(f'{element} is not in list')
+
+
+
+if __name__ == '__main__':
+    lista = DoublyLinkedList()
+
+    lista.append(15)
+    lista.append('jorge')
+    lista.append(True)
+    lista.append(3.14159)
+
+    lista.prepend('maradona')
+    lista.prepend(False)
+
+    print(lista._size)    
