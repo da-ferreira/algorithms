@@ -150,6 +150,6 @@ if __name__ == '__main__':
     lista.prepend(False)
 
     print(len(lista))
-    print(lista)  # False <-> maradona <-> 15 <-> jorge <-> True <-> 3.14159
+    print(lista)  # False <-> 'maradona' <-> 15 <-> 'jorge' <-> True <-> 3.14159
      
   
