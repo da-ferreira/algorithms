@@ -158,7 +158,7 @@ class LinkedList:
         return representation
 
 
-    # Usando sem a função print
+    # Usado sem a função print
     def __repr__(self):
         return self.__str__()
 
