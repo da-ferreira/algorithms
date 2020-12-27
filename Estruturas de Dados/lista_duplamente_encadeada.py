@@ -83,8 +83,18 @@ class DoublyLinkedList:
 
             self._size -= 1
             return None
+
+        # verifica se a cabeça da lista é o elemento (remoção em O(1))
+        elif self.head.data == element:
+            # colocando o segundo elemento como a cabeça da lista.
+            self.head = self.head.next
+            self.head.previous = None
+            self._size -= 1
+
+            return None
+
         else:
-            pointer = self.head
+            pointer = self.head.next  # começa a partir do segundo elemento
 
             while pointer is not None:
                 if pointer.data == element:
@@ -101,6 +111,31 @@ class DoublyLinkedList:
         # caso o elemento não esteja na lista
         raise ValueError(f'{element} is not in list')
 
+    
+    def __len__(self):
+        """ Retorna o tamanho da lista """
+        return self._size
+    
+
+    # Usado quando é chamada a função print
+    def __str__(self):
+        representation = ''
+        pointer = self.head
+
+        while pointer is not None:
+            if pointer.next is not None:
+                representation += str(pointer.data) + ' <-> '
+            else:
+                representation += str(pointer.data)
+
+            pointer = pointer.next
+
+        return representation
+
+
+    # Usado sem a função print
+    def __repr__(self):
+        return self.__str__()
 
 
 if __name__ == '__main__':
@@ -114,4 +149,7 @@ if __name__ == '__main__':
     lista.prepend('maradona')
     lista.prepend(False)
 
-    print(lista._size)    
+    print(len(lista))
+    print(lista)  # False <-> maradona <-> 15 <-> jorge <-> True <-> 3.14159
+     
+  
