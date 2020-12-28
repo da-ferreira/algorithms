@@ -99,7 +99,7 @@ class LinkedList:
 
 
     def _getnode(self, index):
-        """ Retorna o i-esimo ponteiro indicado pelo index """
+        """ Retorna o i-esimo nó indicado pelo index """
 
         pointer = self.head
 
@@ -125,7 +125,7 @@ class LinkedList:
         
         
     def __setitem__(self, index, element):
-        """ Modifica o valor do indice "index" a lista
+        """ Modifica o valor do indice "index" na lista
             ex: lista[4] = 15
         """
 
