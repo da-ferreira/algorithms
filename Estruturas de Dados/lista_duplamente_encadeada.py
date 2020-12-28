@@ -111,7 +111,49 @@ class DoublyLinkedList:
         # caso o elemento não esteja na lista
         raise ValueError(f'{element} is not in list')
 
+
+    def _getnode(self, index):
+        """ Retorna o i-esimo ponteiro indicado pelo index """
+
+        if index == self._size - 1:
+            return self.tail
+
+        pointer = self.head
+
+        for i in range(index):
+            if pointer is not None:
+                pointer = pointer.next
+            else:
+                raise IndexError('list index out of range')
+        
+        return pointer
+
+
+    def __getitem__(self, index):
+        """ Retorna o valor de index na lista
+            ex: temp = lista[5]
+        """
+        pointer = self._getnode(index)
+            
+        if pointer is not None:
+            return pointer.data
+        
+        raise IndexError('list index out of range')
+
     
+    def __setitem__(self, index, element):
+        """ Modifica o valor do indice "index" na lista
+            ex: lista[4] = 15
+        """
+
+        pointer = self._getnode(index)
+
+        if pointer is not None:
+            pointer.data = element
+        else:
+            raise IndexError('list index out of range')
+    
+
     def __len__(self):
         """ Retorna o tamanho da lista """
         return self._size
@@ -151,5 +193,10 @@ if __name__ == '__main__':
 
     print(len(lista))
     print(lista)  # False <-> 'maradona' <-> 15 <-> 'jorge' <-> True <-> 3.14159
-     
-  
+    
+    print(lista[0])  # -> False
+    print(lista[len(lista) - 1])  # -> 3.14159
+
+    lista[0] = 1+3j  # alterando o valor da cabeça
+    print(lista)  # (1+3j) <-> 'maradona' <-> 15 <-> 'jorge' <-> True <-> 3.14159
+        
