@@ -1,6 +1,6 @@
-# Algoritmos e Estruturas de Dados em Python :fireworks:
+# Algoritmos e Estruturas de Dados :fireworks:
 
-Este é um repositório onde disponibilizo alguns dos algoritmos e estruturas de dados clássicos da Ciência da Computação feitos com a linguagem **Python**.
+Este é um repositório onde disponibilizo alguns dos algoritmos e estruturas de dados **clássicos** da Ciência da Computação.
 
 ## Algoritmos
    - [Busca Binária](https://github.com/da-ferreira/algorithms_and_data_structures/blob/main/Algoritmos/busca-binaria.py)
