@@ -1,6 +1,4 @@
 
-package algoritmos;
-
 /**
  * @author da-ferreira
  */
