@@ -4,7 +4,7 @@
  */
 
 public class BuscaBinaria {
-    public static int sort(int vetor[], int item) {
+    public static int busca_binaria(int vetor[], int item) {
         int inicio = 0;
         int fim = vetor.length - 1;
         
