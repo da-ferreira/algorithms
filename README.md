@@ -4,7 +4,7 @@ Repositório onde disponibilizo alguns dos algoritmos e estruturas de dados mais
 
 ## Algoritmos
    - Busca Binária [[Python]](https://github.com/da-ferreira/algorithms_and_data_structures/blob/main/Algoritmos/busca-binaria.py) [[Java]](https://github.com/da-ferreira/algorithms/blob/main/Algoritmos/BuscaBinaria.java)
-   - [Busca Linear Recursiva](https://github.com/da-ferreira/algorithms_and_data_structures/blob/main/Algoritmos/busca-linear-recursiva.py)
+   - Busca Linear Recursiva [[Python]](https://github.com/da-ferreira/algorithms_and_data_structures/blob/main/Algoritmos/busca-linear-recursiva.py) [[Java]]()
    - [Sequência de Fibonacci](https://github.com/da-ferreira/algorithms_and_data_structures/blob/main/Algoritmos/fibonacci.py)
 
 ## Estruturas de Dados
@@ -13,8 +13,8 @@ Repositório onde disponibilizo alguns dos algoritmos e estruturas de dados mais
    - [Árvore de Fenwick](https://github.com/da-ferreira/algorithms_and_data_structures/blob/main/Estruturas%20de%20Dados/arvore_de_fenwick.py)
    - [Deque](https://github.com/da-ferreira/algorithms_and_data_structures/blob/main/Estruturas%20de%20Dados/deque.py)
    - [Fila](https://github.com/da-ferreira/algorithms_and_data_structures/blob/main/Estruturas%20de%20Dados/fila.py)
-   - [Lista Encadeada](https://github.com/da-ferreira/algorithms_and_data_structures/blob/main/Estruturas%20de%20Dados/lista_encadeada.py)
-   - [Lista Duplamente Encadeada](https://github.com/da-ferreira/algorithms/blob/main/Estruturas%20de%20Dados/lista_duplamente_encadeada.py)
+   - Lista Encadeada [[Python]](https://github.com/da-ferreira/algorithms_and_data_structures/blob/main/Estruturas%20de%20Dados/lista_encadeada.py) [[Java]](https://github.com/da-ferreira/algorithms/tree/main/Estruturas%20de%20Dados/edjava_01_lista_simplesmente_encadeada)
+   - Lista Duplamente Encadeada [[Python]](https://github.com/da-ferreira/algorithms/blob/main/Estruturas%20de%20Dados/lista_duplamente_encadeada.py) [[Java]](https://github.com/da-ferreira/algorithms/tree/main/Estruturas%20de%20Dados/edjava_02_lista_duplamente_encadeada)
    - [Mínimo Stack](https://github.com/da-ferreira/algorithms_and_data_structures/blob/main/Estruturas%20de%20Dados/minimo_stack.py)
    - [Pilha](https://github.com/da-ferreira/algorithms_and_data_structures/blob/main/Estruturas%20de%20Dados/pilha.py)
 
