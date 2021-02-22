@@ -4,7 +4,7 @@ Repositório onde disponibilizo alguns dos algoritmos e estruturas de dados mais
 
 ## Algoritmos
    - Busca Binária [[Python]](https://github.com/da-ferreira/algorithms_and_data_structures/blob/main/Algoritmos/busca-binaria.py) [[Java]](https://github.com/da-ferreira/algorithms/blob/main/Algoritmos/BuscaBinaria.java)
-   - [Busca Linear Recursiva em Python]](https://github.com/da-ferreira/algorithms_and_data_structures/blob/main/Algoritmos/busca-linear-recursiva.py)
+   - [Busca Linear Recursiva em Python](https://github.com/da-ferreira/algorithms_and_data_structures/blob/main/Algoritmos/busca-linear-recursiva.py)
    - [Busca Linear em Java](https://github.com/da-ferreira/algorithms/blob/main/Algoritmos/BuscaLinear.java)
    - [Sequência de Fibonacci](https://github.com/da-ferreira/algorithms_and_data_structures/blob/main/Algoritmos/fibonacci.py)
 
