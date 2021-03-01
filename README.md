@@ -6,7 +6,7 @@ Repositório onde disponibilizo alguns dos algoritmos e estruturas de dados mais
 |:---       |  :---: | :---:|
 |Busca Binária | [VER](https://github.com/da-ferreira/algorithms_and_data_structures/blob/main/Algoritmos/busca-binaria.py)| [VER](https://github.com/da-ferreira/algorithms/blob/main/Algoritmos/BuscaBinaria.java) |
 |Busca Linear Recursiva | [VER](https://github.com/da-ferreira/algorithms_and_data_structures/blob/main/Algoritmos/busca-linear-recursiva.py) | null |
-|Sequência de Fibonacci| [VER](https://github.com/da-ferreira/algorithms_and_data_structures/blob/main/Algoritmos/fibonacci.py) | null |
+|Sequência de Fibonacci| [VER](https://github.com/da-ferreira/algorithms_and_data_structures/blob/main/Algoritmos/fibonacci.py) | null |  
 
 |Estruturas de Dados | Python | Java |
 |:---                |  :---: | :---:|
@@ -18,7 +18,7 @@ Repositório onde disponibilizo alguns dos algoritmos e estruturas de dados mais
 |Lista Encadeada | [VER](https://github.com/da-ferreira/algorithms_and_data_structures/blob/main/Estruturas%20de%20Dados/lista_encadeada.py) | [VER](https://github.com/da-ferreira/algorithms/tree/main/Estruturas%20de%20Dados/edjava_01_lista_simplesmente_encadeada)|
 |Lista Duplamente Encadeada | [VER](https://github.com/da-ferreira/algorithms/blob/main/Estruturas%20de%20Dados/lista_duplamente_encadeada.py) | [VER](https://github.com/da-ferreira/algorithms/tree/main/Estruturas%20de%20Dados/edjava_02_lista_duplamente_encadeada) |
 |Mínimo Stack | [VER](https://github.com/da-ferreira/algorithms_and_data_structures/blob/main/Estruturas%20de%20Dados/minimo_stack.py) | null |
-|Pilha| [VER](https://github.com/da-ferreira/algorithms_and_data_structures/blob/main/Estruturas%20de%20Dados/pilha.py) | null |
+|Pilha| [VER](https://github.com/da-ferreira/algorithms_and_data_structures/blob/main/Estruturas%20de%20Dados/pilha.py) | null |  
 
 |Ordenação | Python | Java |
 |:---      |  :---: | :---:|
@@ -32,7 +32,7 @@ Repositório onde disponibilizo alguns dos algoritmos e estruturas de dados mais
 |Merge Sort| [VER](https://github.com/da-ferreira/algorithms_and_data_structures/blob/main/Ordenação/mergesort.py) | null |
 |Quick Sort| [VER](https://github.com/da-ferreira/algorithms_and_data_structures/blob/main/Ordenação/quicksort.py) | null |
 |Selection Sort| [VER](https://github.com/da-ferreira/algorithms_and_data_structures/blob/main/Ordenação/selectionsort.py) | null |
-|[Shell Sort] | [VER](https://github.com/da-ferreira/algorithms_and_data_structures/blob/main/Ordenação/shellsort.py) | null |
+|Shell Sort | [VER](https://github.com/da-ferreira/algorithms_and_data_structures/blob/main/Ordenação/shellsort.py) | null |  
   
 |Outros | Python | Java |
 |:---   |  :---: | :---:|
